@@ -34,7 +34,7 @@ pub fn p3d_process_n(input: &[u8], algo: AlgoType, depth: usize, par1: i16, par2
     match algo {
         AlgoType::Grid2dV2 => grid2d::p3d_process_n(input, algo, depth, par1, par2, trans),
         AlgoType::Grid2dV3 => grid2d::p3d_process_n(input, algo, depth, par1, par2, trans),
-        AlgoType::Grid2dV3a => grid2d::p3d_process_n(input, algo, depth, par1, par2, trans),
+        AlgoType::Grid2dV3a => grid2d_v3m::p3d_process_n(input, algo, depth, par1, par2, trans),
         AlgoType::Grid2dV3m => grid2d_v3m::p3d_process_n(input, algo, depth, par1, par2, trans),
         _ => Err(P3DError::UnsupportedAlgorithms),
     }
